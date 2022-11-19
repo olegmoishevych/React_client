@@ -7,7 +7,7 @@ import {
 } from "api/api";
 import { RequestStatus, setError, setInfo, setLoading } from "./app-reducer";
 import { Dispatch } from "redux";
-import { RecoveryEmailType } from "feature/password_recovery/Password_recovery";
+import { RecoveryEmailType } from "feature/passwordRecovery/PasswordRecovery";
 
 type AuthActionsType =
   | ReturnType<typeof setSingUp>

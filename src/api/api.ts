@@ -1,5 +1,5 @@
 import { instance } from "./instance";
-import { RecoveryEmailType } from "feature/password_recovery/Password_recovery";
+import { RecoveryEmailType } from "feature/passwordRecovery/PasswordRecovery";
 import {
   parseAxiosError,
   getDataFromAxiosResponse,
