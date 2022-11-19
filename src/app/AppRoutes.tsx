@@ -9,7 +9,7 @@ import { PasswordRecovery } from 'feature/password_recovery/Password_recovery'
 import { NewPassword } from 'feature/password_recovery/NewPassword'
 import { CheckEmail } from 'feature/password_recovery/CheckEmail'
 import { MyPack } from 'feature/myPack/MyPack'
-import { FriendSPack } from 'feature/friends_pack/Friend’s Pack'
+import { FriendsPack } from 'feature/friendsPack/FriendsPack'
 import { PacksList } from 'feature/packsList/PacksList'
 import { NamePack } from 'feature/namePack/NamePack'
 
@@ -25,7 +25,7 @@ export const AppRoutes: React.FC = () => (
         <Route path="/check" element={<CheckEmail />} />
         <Route path="/test" element={<Test />} />
         <Route path="/mypack" element={<MyPack />} />
-        <Route path="/friendspack" element={<FriendSPack />} />
+        <Route path="/friendspack" element={<FriendsPack />} />
         <Route path="/packslist" element={<PacksList />} />
         <Route path="/name-pack" element={<NamePack />} />
     </Routes>
