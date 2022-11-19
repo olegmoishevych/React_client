@@ -4,13 +4,11 @@ import React, { useEffect } from "react";
 import s from "./PasswordRecovery.module.css";
 import { forgotTC } from "../../redux/auth-reducer";
 import {
-  AppRootReducerType,
   useAppDispatch,
   useAppSelector,
 } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
 import { RequestStatus } from "../../redux/app-reducer";
-import { useSelector } from "react-redux/es/hooks/useSelector";
 
 type FormikErrorType = {
   email: string;

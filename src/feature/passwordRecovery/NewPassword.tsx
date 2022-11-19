@@ -55,7 +55,6 @@ export const NewPassword = () => {
           justifyContent: "center",
           flexDirection: "column",
         }}
-        // className={s.newPass}
         elevation={3}
       >
         <h2 className={s.h2}>Create new password</h2>

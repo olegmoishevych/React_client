@@ -3,8 +3,7 @@ import s from "./CheckEmail.module.css";
 import { Button, Paper } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import image from "assets/CheckEmail.png";
-import { useSelector } from "react-redux";
-import { AppRootReducerType, useAppSelector } from "../../redux/store";
+import { useAppSelector } from "../../redux/store";
 import { RequestStatus } from "../../redux/app-reducer";
 
 export const CheckEmail = () => {
