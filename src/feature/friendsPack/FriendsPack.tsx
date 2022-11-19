@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import KeyboardReturnRoundedIcon from '@mui/icons-material/KeyboardReturnRounded'
 import Box from '@mui/material/Box'
 import { Link } from 'react-router-dom'
@@ -9,8 +9,17 @@ import { TablePaginationComponent } from '../../components/TablePaginationCompon
 import { InputSearch } from '../../components/InputSearch'
 import Container from '@mui/material/Container'
 import { BlueButton } from '../../components/BlueButton'
+import { useAppDispatch, useAppSelector } from '../../redux/store'
+import { setCardsTC } from '../../redux/tableReducer'
 
 export const FriendsPack = () => {
+    const dispatch = useAppDispatch()
+    const cards = useAppSelector((state) => state.cards)
+    console.log(cards)
+    useEffect(() => {
+        dispatch(setCardsTC())
+    }, [])
+
     return (
         <Container sx={{ maxWidth: '1008px' }}>
             <Box style={{ width: '100%', margin: '0 auto' }}>
