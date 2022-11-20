@@ -1,1 +1,1 @@
-export const DEV_VERSION = false;
+export const DEV_VERSION = true

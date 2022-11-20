@@ -15,39 +15,55 @@ import { setCardsTC } from '../../redux/tableReducer'
 export const FriendsPack = () => {
     const dispatch = useAppDispatch()
     const cards = useAppSelector((state) => state.cards)
-    console.log(cards)
+
     useEffect(() => {
         dispatch(setCardsTC())
     }, [])
 
     return (
-        <Container sx={{ maxWidth: '1008px' }}>
-            <Box style={{ width: '100%', margin: '0 auto' }}>
-                <Link to={'/login'} style={{ textDecoration: 'none', color: 'black' }}>
-                    <KeyboardReturnRoundedIcon sx={{ mt: 2 }} /> Back to Packs List
-                </Link>
-            </Box>
-            <Box
-                style={{
-                    width: '100%',
-                }}
-            >
+        <>
+            {!cards.cardsData.cards.length ? (
                 <Typography
                     variant={'h6'}
                     style={{
                         fontWeight: 'bold',
-                        display: 'flex',
-                        justifyContent: 'space-between',
+                        // display: 'flex',
+                        margin: '20px 40%',
+                        // justifyContent: 'space-between',
                     }}
                 >
-                    Friend’s Pack
-                    <BlueButton>Learn to pack</BlueButton>
+                    Sorry, maps is over =(
                 </Typography>
-            </Box>
-            <InputSearch />
-            <TableComponent />
-            <Stack sx={{ width: '100%', margin: '0 auto' }} spacing={2}></Stack>
-            <TablePaginationComponent />
-        </Container>
+            ) : (
+                <Container sx={{ maxWidth: '1008px' }}>
+                    <Box style={{ width: '100%', margin: '0 auto' }}>
+                        <Link to={'/login'} style={{ textDecoration: 'none', color: 'black' }}>
+                            <KeyboardReturnRoundedIcon sx={{ mt: 2 }} /> Back to Packs List
+                        </Link>
+                    </Box>
+                    <Box
+                        style={{
+                            width: '100%',
+                        }}
+                    >
+                        <Typography
+                            variant={'h6'}
+                            style={{
+                                fontWeight: 'bold',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                            }}
+                        >
+                            Friend’s Pack
+                            <BlueButton>Learn to pack</BlueButton>
+                        </Typography>
+                    </Box>
+                    <InputSearch />
+                    <TableComponent />
+                    <Stack sx={{ width: '100%', margin: '0 auto' }} spacing={2}></Stack>
+                    <TablePaginationComponent />
+                </Container>
+            )}
+        </>
     )
 }
