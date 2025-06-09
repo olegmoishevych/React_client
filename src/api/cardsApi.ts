@@ -17,7 +17,7 @@ export const cardsApi = {
     },
     createCard(card: NewCardType) {
         return instance
-            .post('/cards/card', {card}) //response object not required
+            .post('/cards/card', {card}) 
             .then(getDataFromAxiosResponse)
             .catch(parseAxiosError)
     },
