@@ -27,7 +27,6 @@ export const authApi = {
             .catch(parseAxiosError)
             .then(parseSingUpResponse)
     },
-
     login(data: LoginDataType) {
         return instance
             .post<LoginResponseType>('/auth/login', data)
@@ -35,7 +34,6 @@ export const authApi = {
             .catch(parseAxiosError)
             .then(parseLoginResponse)
     },
-
     forgotPass(email: RecoveryEmailType) {
         return instance
             .post<ResponseForgotPasswordType>('/auth/forgot', {
